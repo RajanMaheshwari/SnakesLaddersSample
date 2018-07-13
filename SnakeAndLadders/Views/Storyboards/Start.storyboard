@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2vM-NG-uGP">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--StartVC-->
+        <scene sceneID="W74-rs-p2J">
+            <objects>
+                <viewController storyboardIdentifier="SLStartVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYJ-kI-O6z" customClass="SLStartVC" customModule="SnakeAndLadders" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e9U-rg-0WV">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="TWn-9X-RIk">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuj-s0-PqG">
+                                <rect key="frame" x="283.5" y="137.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="emC-ro-vIm"/>
+                                    <constraint firstAttribute="width" constant="100" id="qIO-r2-t3w"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playButtonAction:" destination="BYJ-kI-O6z" eventType="touchUpInside" id="qCj-PB-nZg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TWn-9X-RIk" firstAttribute="leading" secondItem="e9U-rg-0WV" secondAttribute="leading" id="6lO-GV-mtm"/>
+                            <constraint firstAttribute="bottom" secondItem="TWn-9X-RIk" secondAttribute="bottom" id="A1O-eo-R9D"/>
+                            <constraint firstItem="TWn-9X-RIk" firstAttribute="top" secondItem="YFb-IN-XkX" secondAttribute="top" id="dlB-KJ-yJb"/>
+                            <constraint firstItem="Yuj-s0-PqG" firstAttribute="centerY" secondItem="TWn-9X-RIk" secondAttribute="centerY" id="hF9-5L-AJQ"/>
+                            <constraint firstItem="Yuj-s0-PqG" firstAttribute="centerX" secondItem="TWn-9X-RIk" secondAttribute="centerX" id="jkf-3E-xpw"/>
+                            <constraint firstAttribute="trailing" secondItem="TWn-9X-RIk" secondAttribute="trailing" id="zdG-hH-69i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YFb-IN-XkX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="laT-vG-S9W"/>
+                    <connections>
+                        <outlet property="playButton" destination="Yuj-s0-PqG" id="Jj5-6P-kTy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6jG-qX-eqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="556.37181409295351" y="-188"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hkA-9l-dtF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="2vM-NG-uGP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FKD-ZI-5fu">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYJ-kI-O6z" kind="relationship" relationship="rootViewController" id="KiV-o9-K4h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GAu-Sw-cQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234.33283358320841" y="-188"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="1600" height="800"/>
+        <image name="play" width="512" height="512"/>
+    </resources>
+</document>

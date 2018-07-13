@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SLBlockCell" id="gTV-IL-0wX" customClass="SLBlockCell" customModule="SnakeAndLadders" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snake" translatesAutoresizingMaskIntoConstraints="NO" id="MCg-sf-LnD">
+                        <rect key="frame" x="0.0" y="25" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="Gcd-BF-HNz"/>
+                            <constraint firstAttribute="width" constant="25" id="wYT-BV-of3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FzP-Vw-KSa">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Quy-M5-hby">
+                        <rect key="frame" x="19" y="19" width="12" height="12"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AgX-1S-BhS">
+                        <rect key="frame" x="19" y="19" width="12" height="12"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="bdv-va-VpK"/>
+                            <constraint firstAttribute="width" constant="12" id="xDZ-q7-faV"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="44" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CG-uL-KtS">
+                        <rect key="frame" x="0.0" y="0.0" width="15" height="14.5"/>
+                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="0.85315957949999999" blue="0.034337395559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="Quy-M5-hby" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="1kL-22-Tnq"/>
+                <constraint firstItem="AgX-1S-BhS" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="3Bl-mt-tYN"/>
+                <constraint firstItem="Quy-M5-hby" firstAttribute="width" secondItem="AgX-1S-BhS" secondAttribute="width" id="3FK-gR-M59"/>
+                <constraint firstItem="FzP-Vw-KSa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6Ir-Nv-Mnm"/>
+                <constraint firstItem="6CG-uL-KtS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ANC-Gz-hha"/>
+                <constraint firstItem="FzP-Vw-KSa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JCY-k7-h3l"/>
+                <constraint firstItem="MCg-sf-LnD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MsP-4t-208"/>
+                <constraint firstAttribute="bottom" secondItem="FzP-Vw-KSa" secondAttribute="bottom" id="SIb-Iv-4kU"/>
+                <constraint firstItem="AgX-1S-BhS" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="SJK-8u-M77"/>
+                <constraint firstItem="Quy-M5-hby" firstAttribute="height" secondItem="AgX-1S-BhS" secondAttribute="height" id="TLR-tA-Bqp"/>
+                <constraint firstAttribute="trailing" secondItem="FzP-Vw-KSa" secondAttribute="trailing" id="VPs-DC-l8D"/>
+                <constraint firstItem="6CG-uL-KtS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kSv-He-gDD"/>
+                <constraint firstItem="Quy-M5-hby" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="kzI-W3-q7c"/>
+                <constraint firstAttribute="bottom" secondItem="MCg-sf-LnD" secondAttribute="bottom" id="lNF-ZH-s7A"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="80" height="80"/>
+            <connections>
+                <outlet property="playerOneTokenView" destination="AgX-1S-BhS" id="55l-Of-bPf"/>
+                <outlet property="playerTwoTokenView" destination="Quy-M5-hby" id="V5K-Lh-UWz"/>
+                <outlet property="powerLabel" destination="6CG-uL-KtS" id="JHU-t7-9SL"/>
+                <outlet property="snakeLadderImageView" destination="MCg-sf-LnD" id="vK1-6d-GQn"/>
+                <outlet property="valueLabel" destination="FzP-Vw-KSa" id="mfg-NQ-zYx"/>
+            </connections>
+            <point key="canvasLocation" x="48" y="68"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="snake" width="320" height="320"/>
+    </resources>
+</document>
