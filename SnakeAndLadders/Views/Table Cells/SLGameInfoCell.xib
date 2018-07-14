@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="52.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter no of board lines (max 7, min 2)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w73-2S-6GE">
+                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter no of board lines (max 7, min 3)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w73-2S-6GE">
                         <rect key="frame" x="8" y="8" width="304" height="35"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="YaC-SY-c1h"/>

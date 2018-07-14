@@ -29,9 +29,6 @@ class SLPlayVC: UIViewController {
 
     let blocksPerRow = 7
     var totalRows = 0
-    
-    let playerOne = Player()
-    let playerTwo = Player()
 
     var stairs = [(from:Int, to:Int)]()
     var snakes = [(from:Int, to:Int)]()
@@ -87,9 +84,9 @@ class SLPlayVC: UIViewController {
             default:
                 return
             }
-            self.statusLabel.text = "\(playerOne.name) Turn"
         }
         self.updateScore()
+        self.statusLabel.text = "\(players[0].name) Turn"
         self.boardCollectionView.reloadData()
     }
     
@@ -105,7 +102,6 @@ class SLPlayVC: UIViewController {
                     block.position = blocks.count
                     blocks.append(block)
                 }
-
             } else {
                 //odd rows
                 for index in stride(from: (maxRowNumber - blocksPerRow + 1), to: maxRowNumber + 1, by: 1) {
@@ -121,16 +117,13 @@ class SLPlayVC: UIViewController {
     
     //Adding snake and ladder powers
     private func addPowers() {
-        stairs.append((2,11))
-        stairs.append((8,19))
-        stairs.append((22,33))
-        stairs.append((34,47))
+        let powers = GameManager.addPowers(noOfLines: totalRows)
+        if let stairs = powers?.stairs, let snakes = powers?.snakes {
+            self.stairs = stairs
+            self.snakes = snakes
+        }
 
-        snakes.append((48,10))
-        snakes.append((36,23))
-        snakes.append((27,15))
-        snakes.append((14,3))
-
+        //Incorporating powers to blocks
         for stair in stairs {
             blocks.forEach { (block:Block) in
                 if block.value == stair.from {
@@ -192,20 +185,6 @@ class SLPlayVC: UIViewController {
         self.boardCollectionView.reloadData()
     }
     
-    func calculateScore(value:Int) -> Int {
-        if let block = blocks.filter({$0.value == value}).first {
-            if block.stairTo != 0  {
-                SoundManager.shared.playSound(soundName: "ladder")
-                return block.stairTo
-            }
-            if block.snakeTo != 0  {
-                SoundManager.shared.playSound(soundName: "snakeBite")
-                return block.snakeTo
-            }
-        }
-        return value
-    }
-    
     //Dice Rolling Action
     @objc func diceRoll() {
         SoundManager.shared.playSound(soundName: "move")
@@ -220,9 +199,8 @@ class SLPlayVC: UIViewController {
                     player.score -= diceRoll
                     self.statusLabel.text = "\(player.name) Can't move"
                 }
-                player.score = calculateScore(value: player.score)
+                player.score = GameManager.calculateScore(value: player.score, blocks: blocks)
                 if diceRoll != 6 {
-                    
                     //Change chance
                     player.isMyChance = false
                     if index < players.count - 1 {

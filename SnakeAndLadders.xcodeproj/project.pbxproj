@@ -41,6 +41,7 @@
 		B470B4EC20F9EAB50006368B /* winner.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B470B4EB20F9EAB50006368B /* winner.mp3 */; };
 		B470B4EE20F9EB150006368B /* snakeBite.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B470B4ED20F9EB150006368B /* snakeBite.mp3 */; };
 		B470B4F020F9EB810006368B /* ladder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B470B4EF20F9EB810006368B /* ladder.mp3 */; };
+		B470B4F220FA07790006368B /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470B4F120FA07790006368B /* GameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		B470B4EB20F9EAB50006368B /* winner.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winner.mp3; sourceTree = "<group>"; };
 		B470B4ED20F9EB150006368B /* snakeBite.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snakeBite.mp3; sourceTree = "<group>"; };
 		B470B4EF20F9EB810006368B /* ladder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ladder.mp3; sourceTree = "<group>"; };
+		B470B4F120FA07790006368B /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				B470B4E920F9E9D20006368B /* SoundManager.swift */,
+				B470B4F120FA07790006368B /* GameManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B470B4D720F9DAD80006368B /* SLGameInfoCell.swift in Sources */,
+				B470B4F220FA07790006368B /* GameManager.swift in Sources */,
 				B458DB4020F90156006B8E3E /* SLStartVC.swift in Sources */,
 				B470B4CF20F9DA7E0006368B /* SLPlayerGameDetailsVC+TableView.swift in Sources */,
 				B458DB5A20F90B3F006B8E3E /* ReusableView.swift in Sources */,
