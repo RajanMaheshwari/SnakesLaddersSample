@@ -56,7 +56,6 @@ class SLPlayVC: UIViewController {
     }
     
     private func initiateGameSetup() {
-        
         self.playerOneLabel.text = ""
         self.playerTwoLabel.text = ""
         self.playerThreeLabel.text = ""
@@ -185,7 +184,7 @@ class SLPlayVC: UIViewController {
         self.boardCollectionView.reloadData()
     }
     
-    //Dice Rolling Action
+    //MARK:- Dice Rolling Action
     @objc func diceRoll() {
         SoundManager.shared.playSound(soundName: "move")
 
