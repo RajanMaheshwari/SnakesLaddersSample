@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SLPlayersInfoCell" rowHeight="245" id="KGk-i7-Jjw" customClass="SLPlayersInfoCell" customModule="SnakeAndLadders" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="245"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="244.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Player 1 Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxJ-6J-v0W">
+                        <rect key="frame" x="8" y="69" width="304" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="z6P-QG-cu0"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                    </textField>
+                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Player 2 Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3o-3U-8Yw">
+                        <rect key="frame" x="8" y="114" width="304" height="35"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                    </textField>
+                    <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Player 3 Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jxG-Ve-VDt">
+                        <rect key="frame" x="8" y="159" width="304" height="35"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                    </textField>
+                    <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Player 4 Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Ue-FO-icw">
+                        <rect key="frame" x="8" y="204" width="304" height="35"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter player names (max 4) those who want to play. The ones with no name will not be treated as players. Good Luck" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TC7-hx-dk8">
+                        <rect key="frame" x="8" y="10" width="304" height="49"/>
+                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="3Ue-FO-icw" secondAttribute="bottom" constant="5.5" id="36s-ye-qiT"/>
+                    <constraint firstItem="g3o-3U-8Yw" firstAttribute="top" secondItem="qxJ-6J-v0W" secondAttribute="bottom" constant="10" id="7Dg-cb-aw9"/>
+                    <constraint firstItem="g3o-3U-8Yw" firstAttribute="leading" secondItem="qxJ-6J-v0W" secondAttribute="leading" id="BNX-Ze-mr0"/>
+                    <constraint firstItem="jxG-Ve-VDt" firstAttribute="trailing" secondItem="g3o-3U-8Yw" secondAttribute="trailing" id="GKI-As-B0J"/>
+                    <constraint firstItem="g3o-3U-8Yw" firstAttribute="trailing" secondItem="qxJ-6J-v0W" secondAttribute="trailing" id="Izl-sQ-2N9"/>
+                    <constraint firstItem="qxJ-6J-v0W" firstAttribute="top" secondItem="TC7-hx-dk8" secondAttribute="bottom" constant="10" id="J5S-f1-4Ar"/>
+                    <constraint firstItem="3Ue-FO-icw" firstAttribute="leading" secondItem="jxG-Ve-VDt" secondAttribute="leading" id="Jik-Xb-ew4"/>
+                    <constraint firstItem="3Ue-FO-icw" firstAttribute="height" secondItem="jxG-Ve-VDt" secondAttribute="height" id="NnS-ks-VHc"/>
+                    <constraint firstItem="jxG-Ve-VDt" firstAttribute="leading" secondItem="g3o-3U-8Yw" secondAttribute="leading" id="Nx7-og-Deb"/>
+                    <constraint firstAttribute="trailing" secondItem="TC7-hx-dk8" secondAttribute="trailing" constant="8" id="OLn-WD-s61"/>
+                    <constraint firstItem="jxG-Ve-VDt" firstAttribute="height" secondItem="g3o-3U-8Yw" secondAttribute="height" id="S7d-QA-jE5"/>
+                    <constraint firstItem="qxJ-6J-v0W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="TNt-Sx-1PM"/>
+                    <constraint firstItem="TC7-hx-dk8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="UM1-7N-EUM"/>
+                    <constraint firstItem="jxG-Ve-VDt" firstAttribute="top" secondItem="g3o-3U-8Yw" secondAttribute="bottom" constant="10" id="Xu9-65-ZSd"/>
+                    <constraint firstItem="TC7-hx-dk8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="abc-Bb-h4X"/>
+                    <constraint firstItem="3Ue-FO-icw" firstAttribute="top" secondItem="jxG-Ve-VDt" secondAttribute="bottom" constant="10" id="hQZ-Of-1F7"/>
+                    <constraint firstItem="g3o-3U-8Yw" firstAttribute="height" secondItem="qxJ-6J-v0W" secondAttribute="height" id="lfg-Bs-ska"/>
+                    <constraint firstItem="3Ue-FO-icw" firstAttribute="trailing" secondItem="jxG-Ve-VDt" secondAttribute="trailing" id="snU-MR-hbM"/>
+                    <constraint firstAttribute="trailing" secondItem="qxJ-6J-v0W" secondAttribute="trailing" constant="8" id="uEj-yL-Ubm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="playerFourTextField" destination="3Ue-FO-icw" id="cnv-Fu-fNi"/>
+                <outlet property="playerOneTextField" destination="qxJ-6J-v0W" id="WnY-xn-HQl"/>
+                <outlet property="playerThreeTextField" destination="jxG-Ve-VDt" id="zTG-Dc-G5w"/>
+                <outlet property="playerTwoTextField" destination="g3o-3U-8Yw" id="oib-Ip-Fqs"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="154.5"/>
+        </tableViewCell>
+    </objects>
+</document>

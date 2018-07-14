@@ -22,6 +22,8 @@ class SLWinnerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.congoLabel.text = "Congratulations \(winner)"
+        SoundManager.shared.playSound(soundName: "winner")
+
     }
 
     //MARK:- IBActions

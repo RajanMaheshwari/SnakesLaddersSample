@@ -19,4 +19,17 @@ extension UIViewController {
     static func instantiate(fromAppStoryboard appStoryboard: AppStoryboard) -> Self {
         return appStoryboard.viewController(viewControllerClass: self)
     }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
+    
+    func showAlert(title:String, message:String, button:String, _ completionHandler:(()->())?) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: button, style: .default) { (action) in
+            completionHandler?()
+        }
+        alertController.addAction(okButton)
+        self.present(alertController, animated: true, completion: nil)
+    }
 }

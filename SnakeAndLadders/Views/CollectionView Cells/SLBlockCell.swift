@@ -15,7 +15,9 @@ class SLBlockCell: UICollectionViewCell {
     @IBOutlet weak var playerOneTokenView: UIView!
     @IBOutlet weak var snakeLadderImageView: UIImageView!
     @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var playerFourTokenView: UIView!
     
+    @IBOutlet weak var playerThreeTokenView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,11 +28,22 @@ class SLBlockCell: UICollectionViewCell {
         self.playerTwoTokenView.isHidden = true
         self.playerTwoTokenView.backgroundColor = UIColor.blue
         self.playerTwoTokenView.layer.cornerRadius = self.playerTwoTokenView.frame.size.width/2
+        
+        self.playerThreeTokenView.isHidden = true
+        self.playerThreeTokenView.backgroundColor = UIColor.blue
+        self.playerThreeTokenView.layer.cornerRadius = self.playerThreeTokenView.frame.size.width/2
+        
+        self.playerFourTokenView.isHidden = true
+        self.playerFourTokenView.backgroundColor = UIColor.blue
+        self.playerFourTokenView.layer.cornerRadius = self.playerFourTokenView.frame.size.width/2
     }
     
     func setData(block:Block) {
         self.playerOneTokenView.isHidden = true
         self.playerTwoTokenView.isHidden = true
+        self.playerThreeTokenView.isHidden = true
+        self.playerFourTokenView.isHidden = true
+
         self.valueLabel.text = "\(block.value)"
         snakeLadderImageView.image = nil
         powerLabel.text = ""

@@ -21,7 +21,10 @@ class SLPlayVC: UIViewController {
     
     var ratio:CGFloat = 0.0
     var blocks = Array<Block>()
-    let totalRows = 7
+    var players = Array<Player>()
+
+    let blocksPerRow = 7
+    var totalRows = 0
     
     let playerOne = Player()
     let playerTwo = Player()
@@ -52,6 +55,14 @@ class SLPlayVC: UIViewController {
     }
     
     private func initiateGameSetup() {
+        players.forEach { (player:Player) in
+            player.block = nil
+            player.score = 0
+            player.isMyChance = false
+        }
+        players[0].isMyChance = true
+        self.statusLabel.text = "\(players[0].name) Turn"
+
         playerOne.name = "Player 1"
         playerTwo.name = "Player 2"
         playerOne.score = 0
@@ -71,10 +82,10 @@ class SLPlayVC: UIViewController {
     //Making the board numbers
     private func makeData() {
         for i in (1...totalRows).reversed() {
-            let maxRowNumber = totalRows * i
+            let maxRowNumber = 7 * i
             if i % 2 == 0 {
                 //even rows
-                for index in stride(from: maxRowNumber, to: (maxRowNumber - totalRows), by: -1) {
+                for index in stride(from: maxRowNumber, to: (maxRowNumber - blocksPerRow), by: -1) {
                     let block = Block()
                     block.value = index
                     block.position = blocks.count
@@ -83,7 +94,7 @@ class SLPlayVC: UIViewController {
 
             } else {
                 //odd rows
-                for index in stride(from: (maxRowNumber - totalRows + 1), to: maxRowNumber + 1, by: 1) {
+                for index in stride(from: (maxRowNumber - blocksPerRow + 1), to: maxRowNumber + 1, by: 1) {
                     let block = Block()
                     block.value = index
                     block.position = blocks.count
@@ -99,11 +110,11 @@ class SLPlayVC: UIViewController {
         stairs.append((2,11))
         stairs.append((8,19))
         stairs.append((22,33))
-        stairs.append((35,47))
+        stairs.append((34,47))
 
         snakes.append((48,10))
         snakes.append((36,23))
-        snakes.append((28,15))
+        snakes.append((27,15))
         snakes.append((14,3))
 
         for stair in stairs {
@@ -148,12 +159,12 @@ class SLPlayVC: UIViewController {
         
         self.boardCollectionView.reloadData()
         
-        if playerOne.score == 49 {
+        if playerOne.score == totalRows * blocksPerRow {
             self.statusLabel.text = "\(playerOne.name) is WINNER"
             self.goToWinner(winner: playerOne.name)
             return
         }
-        if playerTwo.score == 49 {
+        if playerTwo.score == totalRows * blocksPerRow {
             self.statusLabel.text = "\(playerTwo.name) is WINNER"
             self.goToWinner(winner: playerTwo.name)
         }
@@ -162,9 +173,11 @@ class SLPlayVC: UIViewController {
     func calculateScore(value:Int) -> Int {
         if let block = blocks.filter({$0.value == value}).first {
             if block.stairTo != 0  {
+                SoundManager.shared.playSound(soundName: "ladder")
                 return block.stairTo
             }
             if block.snakeTo != 0  {
+                SoundManager.shared.playSound(soundName: "snakeBite")
                 return block.snakeTo
             }
         }
@@ -173,11 +186,13 @@ class SLPlayVC: UIViewController {
     
     //Dice Rolling Action
     @objc func diceRoll() {
+        SoundManager.shared.playSound(soundName: "move")
+
         let diceRoll = Int(arc4random_uniform(6)) + 1
         diceImageView.image = UIImage(named: "Dice\(diceRoll)")
         if playerOne.isMyChance {
             self.playerOne.score += diceRoll
-            if playerOne.score > 49 {
+            if playerOne.score > totalRows * blocksPerRow {
                 playerOne.score -= diceRoll
                 self.statusLabel.text = "\(playerOne.name) Can't move"
             }
@@ -189,7 +204,7 @@ class SLPlayVC: UIViewController {
             }
         } else {
             self.playerTwo.score += diceRoll
-            if playerTwo.score > 49 {
+            if playerTwo.score > totalRows * blocksPerRow {
                 playerTwo.score -= diceRoll
                 self.statusLabel.text = "\(playerTwo.name) Can't move"
             }
@@ -202,7 +217,7 @@ class SLPlayVC: UIViewController {
         }
         self.updateScore()
     }
-
+    
 }
 
 extension SLPlayVC:RefreshDelegate {

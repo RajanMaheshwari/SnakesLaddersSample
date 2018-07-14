@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SLGameInfoCell" rowHeight="53" id="KGk-i7-Jjw" customClass="SLGameInfoCell" customModule="SnakeAndLadders" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="52.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter no of board lines (max 7, min 2)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w73-2S-6GE">
+                        <rect key="frame" x="8" y="8" width="304" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="YaC-SY-c1h"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="w73-2S-6GE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="AJe-fu-Dn7"/>
+                    <constraint firstAttribute="trailing" secondItem="w73-2S-6GE" secondAttribute="trailing" constant="8" id="aoA-O1-D0x"/>
+                    <constraint firstItem="w73-2S-6GE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="j4r-Ek-0T1"/>
+                    <constraint firstAttribute="bottom" secondItem="w73-2S-6GE" secondAttribute="bottom" constant="9.5" id="oVw-AH-IP5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="noOfLinesTextField" destination="w73-2S-6GE" id="mqH-bj-h68"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="58.5"/>
+        </tableViewCell>
+    </objects>
+</document>

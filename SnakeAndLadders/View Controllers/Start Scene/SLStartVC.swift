@@ -37,7 +37,7 @@ class SLStartVC: UIViewController {
     
     //MARK:- IBActions
     @IBAction func playButtonAction(_ sender: Any) {
-        let playVC = SLPlayVC.instantiate(fromAppStoryboard: .Play)
+        let playVC = SLPlayerGameDetailsVC.instantiate(fromAppStoryboard: .Start)
         self.navigationController?.pushViewController(playVC, animated: true)
     }
     

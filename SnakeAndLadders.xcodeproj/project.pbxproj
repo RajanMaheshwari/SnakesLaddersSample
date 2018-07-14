@@ -27,7 +27,20 @@
 		B458DB6320F927C5006B8E3E /* NSLayoutConstraint+Additons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B458DB6220F927C5006B8E3E /* NSLayoutConstraint+Additons.swift */; };
 		B458DB6520F92F70006B8E3E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B458DB6420F92F70006B8E3E /* Player.swift */; };
 		B458DB6820F946D1006B8E3E /* SLWinnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B458DB6720F946D1006B8E3E /* SLWinnerVC.swift */; };
-		B458DB6B20F94DF6006B8E3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B458DB6A20F94DF6006B8E3E /* AppDelegate.swift */; };
+		B470B4CD20F9D9AE0006368B /* SLPlayerGameDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470B4CC20F9D9AE0006368B /* SLPlayerGameDetailsVC.swift */; };
+		B470B4CF20F9DA7E0006368B /* SLPlayerGameDetailsVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470B4CE20F9DA7E0006368B /* SLPlayerGameDetailsVC+TableView.swift */; };
+		B470B4D720F9DAD80006368B /* SLGameInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470B4D520F9DAD80006368B /* SLGameInfoCell.swift */; };
+		B470B4D820F9DAD80006368B /* SLGameInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B470B4D620F9DAD80006368B /* SLGameInfoCell.xib */; };
+		B470B4DA20F9DAF50006368B /* UITableView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470B4D920F9DAF50006368B /* UITableView+Additions.swift */; };
+		B470B4DD20F9DB460006368B /* SLPlayersInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470B4DB20F9DB460006368B /* SLPlayersInfoCell.swift */; };
+		B470B4DE20F9DB460006368B /* SLPlayersInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B470B4DC20F9DB460006368B /* SLPlayersInfoCell.xib */; };
+		B470B4E020F9E1BA0006368B /* SLPlayerGameDetailsVC+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470B4DF20F9E1BA0006368B /* SLPlayerGameDetailsVC+TextField.swift */; };
+		B470B4E420F9E8D70006368B /* move.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B470B4E320F9E8D70006368B /* move.mp3 */; };
+		B470B4E720F9E9B90006368B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470B4E620F9E9B90006368B /* AppDelegate.swift */; };
+		B470B4EA20F9E9D20006368B /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470B4E920F9E9D20006368B /* SoundManager.swift */; };
+		B470B4EC20F9EAB50006368B /* winner.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B470B4EB20F9EAB50006368B /* winner.mp3 */; };
+		B470B4EE20F9EB150006368B /* snakeBite.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B470B4ED20F9EB150006368B /* snakeBite.mp3 */; };
+		B470B4F020F9EB810006368B /* ladder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B470B4EF20F9EB810006368B /* ladder.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +66,20 @@
 		B458DB6220F927C5006B8E3E /* NSLayoutConstraint+Additons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Additons.swift"; sourceTree = "<group>"; };
 		B458DB6420F92F70006B8E3E /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B458DB6720F946D1006B8E3E /* SLWinnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLWinnerVC.swift; sourceTree = "<group>"; };
-		B458DB6A20F94DF6006B8E3E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B470B4CC20F9D9AE0006368B /* SLPlayerGameDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLPlayerGameDetailsVC.swift; sourceTree = "<group>"; };
+		B470B4CE20F9DA7E0006368B /* SLPlayerGameDetailsVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SLPlayerGameDetailsVC+TableView.swift"; sourceTree = "<group>"; };
+		B470B4D520F9DAD80006368B /* SLGameInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLGameInfoCell.swift; sourceTree = "<group>"; };
+		B470B4D620F9DAD80006368B /* SLGameInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SLGameInfoCell.xib; sourceTree = "<group>"; };
+		B470B4D920F9DAF50006368B /* UITableView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Additions.swift"; sourceTree = "<group>"; };
+		B470B4DB20F9DB460006368B /* SLPlayersInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLPlayersInfoCell.swift; sourceTree = "<group>"; };
+		B470B4DC20F9DB460006368B /* SLPlayersInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SLPlayersInfoCell.xib; sourceTree = "<group>"; };
+		B470B4DF20F9E1BA0006368B /* SLPlayerGameDetailsVC+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SLPlayerGameDetailsVC+TextField.swift"; sourceTree = "<group>"; };
+		B470B4E320F9E8D70006368B /* move.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = move.mp3; sourceTree = "<group>"; };
+		B470B4E620F9E9B90006368B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B470B4E920F9E9D20006368B /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		B470B4EB20F9EAB50006368B /* winner.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winner.mp3; sourceTree = "<group>"; };
+		B470B4ED20F9EB150006368B /* snakeBite.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snakeBite.mp3; sourceTree = "<group>"; };
+		B470B4EF20F9EB810006368B /* ladder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ladder.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +112,15 @@
 		B458DB2620F8FE44006B8E3E /* SnakeAndLadders */ = {
 			isa = PBXGroup;
 			children = (
-				B458DB6920F94DF6006B8E3E /* Application */,
+				B470B4E820F9E9C40006368B /* Managers */,
+				B470B4E520F9E9B90006368B /* Application */,
 				B458DB5F20F92661006B8E3E /* Utilities */,
 				B458DB5620F90B3F006B8E3E /* Protocols */,
 				B458DB4C20F9095E006B8E3E /* Extensions */,
 				B458DB4120F90168006B8E3E /* Views */,
 				B458DB3D20F90142006B8E3E /* View Controllers */,
 				B458DB3C20F900B2006B8E3E /* Models */,
+				B470B4E120F9E8D70006368B /* Supporting Files */,
 				B458DB3120F8FE45006B8E3E /* Assets.xcassets */,
 				B458DB3320F8FE45006B8E3E /* LaunchScreen.storyboard */,
 				B458DB3620F8FE45006B8E3E /* Info.plist */,
@@ -114,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				B458DB3E20F90142006B8E3E /* Start Scene */,
+				B470B4CB20F9D9930006368B /* Player Details */,
 				B458DB4920F908B2006B8E3E /* Play Scene */,
 				B458DB6620F946C1006B8E3E /* Winner Scene */,
 			);
@@ -131,6 +160,7 @@
 		B458DB4120F90168006B8E3E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B470B4D020F9DAA90006368B /* Table Cells */,
 				B458DB5120F90B15006B8E3E /* CollectionView Cells */,
 				B458DB4220F90193006B8E3E /* Storyboards */,
 			);
@@ -158,6 +188,7 @@
 		B458DB4C20F9095E006B8E3E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B470B4D920F9DAF50006368B /* UITableView+Additions.swift */,
 				B458DB6220F927C5006B8E3E /* NSLayoutConstraint+Additons.swift */,
 				B458DB5D20F91047006B8E3E /* UICollectionView+Additions.swift */,
 				B458DB4D20F9095E006B8E3E /* UIViewController+Additions.swift */,
@@ -200,12 +231,60 @@
 			path = "Winner Scene";
 			sourceTree = "<group>";
 		};
-		B458DB6920F94DF6006B8E3E /* Application */ = {
+		B470B4CB20F9D9930006368B /* Player Details */ = {
 			isa = PBXGroup;
 			children = (
-				B458DB6A20F94DF6006B8E3E /* AppDelegate.swift */,
+				B470B4CC20F9D9AE0006368B /* SLPlayerGameDetailsVC.swift */,
+				B470B4CE20F9DA7E0006368B /* SLPlayerGameDetailsVC+TableView.swift */,
+				B470B4DF20F9E1BA0006368B /* SLPlayerGameDetailsVC+TextField.swift */,
+			);
+			path = "Player Details";
+			sourceTree = "<group>";
+		};
+		B470B4D020F9DAA90006368B /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B470B4D520F9DAD80006368B /* SLGameInfoCell.swift */,
+				B470B4D620F9DAD80006368B /* SLGameInfoCell.xib */,
+				B470B4DB20F9DB460006368B /* SLPlayersInfoCell.swift */,
+				B470B4DC20F9DB460006368B /* SLPlayersInfoCell.xib */,
+			);
+			path = "Table Cells";
+			sourceTree = "<group>";
+		};
+		B470B4E120F9E8D70006368B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B470B4E220F9E8D70006368B /* Sounds */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B470B4E220F9E8D70006368B /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B470B4EF20F9EB810006368B /* ladder.mp3 */,
+				B470B4ED20F9EB150006368B /* snakeBite.mp3 */,
+				B470B4EB20F9EAB50006368B /* winner.mp3 */,
+				B470B4E320F9E8D70006368B /* move.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		B470B4E520F9E9B90006368B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B470B4E620F9E9B90006368B /* AppDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		B470B4E820F9E9C40006368B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B470B4E920F9E9D20006368B /* SoundManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +345,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B470B4F020F9EB810006368B /* ladder.mp3 in Resources */,
+				B470B4D820F9DAD80006368B /* SLGameInfoCell.xib in Resources */,
+				B470B4EC20F9EAB50006368B /* winner.mp3 in Resources */,
+				B470B4DE20F9DB460006368B /* SLPlayersInfoCell.xib in Resources */,
 				B458DB5520F90B28006B8E3E /* SLBlockCell.xib in Resources */,
 				B458DB4820F90880006B8E3E /* Play.storyboard in Resources */,
 				B458DB3520F8FE45006B8E3E /* LaunchScreen.storyboard in Resources */,
+				B470B4E420F9E8D70006368B /* move.mp3 in Resources */,
+				B470B4EE20F9EB150006368B /* snakeBite.mp3 in Resources */,
 				B458DB3220F8FE45006B8E3E /* Assets.xcassets in Resources */,
 				B458DB4620F9020C006B8E3E /* Start.storyboard in Resources */,
 			);
@@ -281,22 +366,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B470B4D720F9DAD80006368B /* SLGameInfoCell.swift in Sources */,
 				B458DB4020F90156006B8E3E /* SLStartVC.swift in Sources */,
+				B470B4CF20F9DA7E0006368B /* SLPlayerGameDetailsVC+TableView.swift in Sources */,
 				B458DB5A20F90B3F006B8E3E /* ReusableView.swift in Sources */,
 				B458DB4420F901CB006B8E3E /* Block.swift in Sources */,
+				B470B4CD20F9D9AE0006368B /* SLPlayerGameDetailsVC.swift in Sources */,
 				B458DB4F20F9095F006B8E3E /* UIViewController+Additions.swift in Sources */,
 				B458DB6120F92661006B8E3E /* Utilities.swift in Sources */,
+				B470B4DA20F9DAF50006368B /* UITableView+Additions.swift in Sources */,
 				B458DB6320F927C5006B8E3E /* NSLayoutConstraint+Additons.swift in Sources */,
 				B458DB6820F946D1006B8E3E /* SLWinnerVC.swift in Sources */,
 				B458DB5920F90B3F006B8E3E /* NibLoadableView.swift in Sources */,
-				B458DB6B20F94DF6006B8E3E /* AppDelegate.swift in Sources */,
 				B458DB3020F8FE44006B8E3E /* SnakeAndLadders.xcdatamodeld in Sources */,
+				B470B4EA20F9E9D20006368B /* SoundManager.swift in Sources */,
+				B470B4DD20F9DB460006368B /* SLPlayersInfoCell.swift in Sources */,
 				B458DB4B20F908DA006B8E3E /* SLPlayVC.swift in Sources */,
 				B458DB5E20F91048006B8E3E /* UICollectionView+Additions.swift in Sources */,
 				B458DB5C20F90F09006B8E3E /* SLPlayVC+CollectionView.swift in Sources */,
 				B458DB5420F90B28006B8E3E /* SLBlockCell.swift in Sources */,
 				B458DB6520F92F70006B8E3E /* Player.swift in Sources */,
 				B458DB5020F9095F006B8E3E /* AppStoryboards.swift in Sources */,
+				B470B4E020F9E1BA0006368B /* SLPlayerGameDetailsVC+TextField.swift in Sources */,
+				B470B4E720F9E9B90006368B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

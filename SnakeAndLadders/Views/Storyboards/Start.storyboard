@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuj-s0-PqG">
-                                <rect key="frame" x="283.5" y="137.5" width="100" height="100"/>
+                                <rect key="frame" x="284" y="137.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="emC-ro-vIm"/>
                                     <constraint firstAttribute="width" constant="100" id="qIO-r2-t3w"/>
@@ -52,6 +52,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6jG-qX-eqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="556.37181409295351" y="-188"/>
+        </scene>
+        <!--Player Game DetailsVC-->
+        <scene sceneID="nhM-J1-015">
+            <objects>
+                <viewController storyboardIdentifier="SLPlayerGameDetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rGN-rD-xnY" customClass="SLPlayerGameDetailsVC" customModule="SnakeAndLadders" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1N0-l4-fOy">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="fWX-Hd-K6l">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iSd-Um-Eef">
+                                <rect key="frame" x="201" y="5" width="264" height="365"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="264" id="K4H-ym-22v"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="rGN-rD-xnY" id="yyb-3M-lYL"/>
+                                    <outlet property="delegate" destination="rGN-rD-xnY" id="Zl4-p5-t0g"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uat-GF-P03">
+                                <rect key="frame" x="567" y="147.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Byu-7g-ztT"/>
+                                    <constraint firstAttribute="height" constant="80" id="u4R-a9-JRF"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playButtonAction:" destination="rGN-rD-xnY" eventType="touchUpInside" id="ITS-dR-mKu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UaE-lP-0Qi" firstAttribute="bottom" secondItem="iSd-Um-Eef" secondAttribute="bottom" constant="5" id="1di-gd-2aK"/>
+                            <constraint firstAttribute="bottom" secondItem="fWX-Hd-K6l" secondAttribute="bottom" id="4z3-HK-Uy1"/>
+                            <constraint firstItem="fWX-Hd-K6l" firstAttribute="top" secondItem="1N0-l4-fOy" secondAttribute="top" id="69B-Zv-jq8"/>
+                            <constraint firstAttribute="trailing" secondItem="fWX-Hd-K6l" secondAttribute="trailing" id="R2s-h5-nIS"/>
+                            <constraint firstItem="UaE-lP-0Qi" firstAttribute="trailing" secondItem="Uat-GF-P03" secondAttribute="trailing" constant="20" id="T3K-01-sPu"/>
+                            <constraint firstItem="iSd-Um-Eef" firstAttribute="top" secondItem="UaE-lP-0Qi" secondAttribute="top" constant="5" id="e8i-MO-6en"/>
+                            <constraint firstItem="iSd-Um-Eef" firstAttribute="centerX" secondItem="fWX-Hd-K6l" secondAttribute="centerX" id="iJ8-Eu-z0u"/>
+                            <constraint firstItem="Uat-GF-P03" firstAttribute="centerY" secondItem="iSd-Um-Eef" secondAttribute="centerY" id="rKY-E1-KIY"/>
+                            <constraint firstItem="fWX-Hd-K6l" firstAttribute="leading" secondItem="1N0-l4-fOy" secondAttribute="leading" id="uRh-4a-AkT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UaE-lP-0Qi"/>
+                    </view>
+                    <connections>
+                        <outlet property="informationTableView" destination="iSd-Um-Eef" id="H6w-sd-1FJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HV5-cQ-2QH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1185.1574212893554" y="-188"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hkA-9l-dtF">
