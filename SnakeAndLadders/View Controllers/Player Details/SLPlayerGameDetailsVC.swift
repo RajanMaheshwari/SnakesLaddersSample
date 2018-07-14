@@ -27,9 +27,12 @@ class SLPlayerGameDetailsVC: UIViewController {
         players.append(Player())
         players.append(Player())
 
+        self.informationTableView.alwaysBounceVertical = false
         self.informationTableView.register(SLGameInfoCell.self)
         self.informationTableView.register(SLPlayersInfoCell.self)
     }
+    
+    
     
     func validate() -> Bool {
         self.dismissKeyboard()

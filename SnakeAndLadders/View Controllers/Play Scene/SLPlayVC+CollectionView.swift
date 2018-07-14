@@ -17,17 +17,7 @@ extension SLPlayVC : UICollectionViewDataSource, UICollectionViewDelegateFlowLay
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:SLBlockCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.setData(block: blocks[indexPath.row])
-        if let block1 = playerOne.block, block1.position == indexPath.row {
-            cell.playerOneTokenView.isHidden = false
-            cell.playerTwoTokenView.isHidden = true
-
-        }
-        
-        if let block2 = playerTwo.block, block2.position == indexPath.row {
-            cell.playerTwoTokenView.isHidden = false
-            cell.playerOneTokenView.isHidden = true
-        }
-        
+        cell.updateToken(indexPath: indexPath, players: players)
         return cell
     }
     

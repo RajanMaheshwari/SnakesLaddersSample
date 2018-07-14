@@ -189,33 +189,7 @@ class SLPlayVC: UIViewController {
                 return
             }
         }
-        
-//        self.playerOneScoreLabel.text = "\(self.playerOne.score)"
-//        self.playerTwoScoreLabel.text = "\(self.playerTwo.score)"
-        
-//        if self.playerOne.score != 0 {
-//            if let block1 = blocks.filter({$0.value == playerOne.score}).first {
-//            self.playerOne.block = block1
-//            }
-//        }
-//
-//        if self.playerTwo.score != 0 {
-//            if let block2 = blocks.filter({$0.value == self.playerTwo.score}).first {
-//                self.playerTwo.block = block2
-//            }
-//        }
-        
         self.boardCollectionView.reloadData()
-        
-//        if playerOne.score == totalRows * blocksPerRow {
-//            self.statusLabel.text = "\(playerOne.name) is WINNER"
-//            self.goToWinner(winner: playerOne.name)
-//            return
-//        }
-//        if playerTwo.score == totalRows * blocksPerRow {
-//            self.statusLabel.text = "\(playerTwo.name) is WINNER"
-//            self.goToWinner(winner: playerTwo.name)
-//        }
     }
     
     func calculateScore(value:Int) -> Int {
@@ -263,36 +237,8 @@ class SLPlayVC: UIViewController {
                 }
             }
         }
-        
-        
-//        if playerOne.isMyChance {
-//            self.playerOne.score += diceRoll
-//            if playerOne.score > totalRows * blocksPerRow {
-//                playerOne.score -= diceRoll
-//                self.statusLabel.text = "\(playerOne.name) Can't move"
-//            }
-//            self.playerOne.score = calculateScore(value: self.playerOne.score)
-//            if diceRoll != 6 {
-//                playerTwo.isMyChance = true
-//                playerOne.isMyChance = false
-//                self.statusLabel.text = "\(playerTwo.name) Turn"
-//            }
-//        } else {
-//            self.playerTwo.score += diceRoll
-//            if playerTwo.score > totalRows * blocksPerRow {
-//                playerTwo.score -= diceRoll
-//                self.statusLabel.text = "\(playerTwo.name) Can't move"
-//            }
-//            self.playerTwo.score = calculateScore(value: self.playerTwo.score)
-//            if diceRoll != 6 {
-//                playerOne.isMyChance = true
-//                playerTwo.isMyChance = false
-//                self.statusLabel.text = "\(playerOne.name) Turn"
-//            }
-//        }
         self.updateScore()
     }
-    
 }
 
 extension SLPlayVC:RefreshDelegate {

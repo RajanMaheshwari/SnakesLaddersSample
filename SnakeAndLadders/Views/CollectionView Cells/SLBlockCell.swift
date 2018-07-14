@@ -30,11 +30,11 @@ class SLBlockCell: UICollectionViewCell {
         self.playerTwoTokenView.layer.cornerRadius = self.playerTwoTokenView.frame.size.width/2
         
         self.playerThreeTokenView.isHidden = true
-        self.playerThreeTokenView.backgroundColor = UIColor.blue
+        self.playerThreeTokenView.backgroundColor = UIColor.green
         self.playerThreeTokenView.layer.cornerRadius = self.playerThreeTokenView.frame.size.width/2
         
         self.playerFourTokenView.isHidden = true
-        self.playerFourTokenView.backgroundColor = UIColor.blue
+        self.playerFourTokenView.backgroundColor = UIColor.yellow
         self.playerFourTokenView.layer.cornerRadius = self.playerFourTokenView.frame.size.width/2
     }
     
@@ -55,6 +55,54 @@ class SLBlockCell: UICollectionViewCell {
             snakeLadderImageView.image = #imageLiteral(resourceName: "ladder")
             powerLabel.text = "\(block.stairTo)"
         }
+    }
+    
+    func updateToken(indexPath:IndexPath, players:[Player]) {
+        for (index,player) in players.enumerated() {
+            if let block = player.block, block.position == indexPath.row {
+                switch index {
+                case 0:
+                    self.playerOneTokenView.isHidden = false
+                    self.playerTwoTokenView.isHidden = true
+                    self.playerThreeTokenView.isHidden = true
+                    self.playerFourTokenView.isHidden = true
+                    
+                case 1:
+                    self.playerOneTokenView.isHidden = true
+                    self.playerTwoTokenView.isHidden = false
+                    self.playerThreeTokenView.isHidden = true
+                    self.playerFourTokenView.isHidden = true
+                    
+                case 2:
+                    self.playerOneTokenView.isHidden = true
+                    self.playerTwoTokenView.isHidden = true
+                    self.playerThreeTokenView.isHidden = false
+                    self.playerFourTokenView.isHidden = true
+                    
+                case 3:
+                    self.playerOneTokenView.isHidden = true
+                    self.playerTwoTokenView.isHidden = true
+                    self.playerThreeTokenView.isHidden = true
+                    self.playerFourTokenView.isHidden = false
+                    
+                default:
+                    return
+                }
+                
+            }
+        }
+        
+//
+//        if let block1 = playerOne.block, block1.position == indexPath.row {
+//            cell.playerOneTokenView.isHidden = false
+//            cell.playerTwoTokenView.isHidden = true
+//
+//        }
+//
+//        if let block2 = playerTwo.block, block2.position == indexPath.row {
+//            cell.playerTwoTokenView.isHidden = false
+//            cell.playerOneTokenView.isHidden = true
+//        }
     }
 
 }
